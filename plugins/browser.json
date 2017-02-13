@@ -9,7 +9,26 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "dichmann.one.OpenLectio"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "dichmann.one.OpenLectio"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "dichmann.one.OpenLectio"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "dichmann.one.OpenLectio"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "dichmann.one.OpenLectio"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "dichmann.one.OpenLectio"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "dichmann.one.OpenLectio"
+        }
+    }
 }
