@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="dichmann.one.OpenLectio" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Open-Lectio</name>
+    <description>
+        A Lectio App
+    </description>
+    <author email="Lectio@Dichmann.one" href="http://www.dichmann.one" />
+    <content src="index.html" />
+    <access origin="http://www.lectio.dk/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="geo:*" />
+</widget>
