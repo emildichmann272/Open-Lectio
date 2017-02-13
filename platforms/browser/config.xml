@@ -9,7 +9,8 @@
     </description>
     <author email="Lectio@Dichmann.one" href="http://www.dichmann.one" />
     <content src="index.html" />
-    <access origin="http://www.lectio.dk/*" />
+    <access origin="http://www.lectio.dk" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="geo:*" />

@@ -7,7 +7,8 @@
     <author email="Lectio@Dichmann.one" href="http://www.dichmann.one" />
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <access origin="http://www.lectio.dk/*" />
+    <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="geo:*" />
