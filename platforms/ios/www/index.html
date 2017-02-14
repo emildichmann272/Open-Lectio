@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <script src="libraries/jquery.min.js"></script>
+        <script src="js/index.js"></script>
+        <title>Open-Lectio</title>
+    </head>
+    	
+    <body onload="download('http://www.lectio.dk')">
+        <input id="entrySearch" type="text" placeholder="Søg Gymnasie" />
+        <div class="resultsContainer">
+            <div class="results" gymID="1">Gymnasie Søgning Nummer 1</div>
+            <div class="results" gymID="2">Gymnasie Søgning Nummer 2</div>
+            <div class="results" gymID="3">Gymnasie Søgning Nummer 3</div>
+            <div class="results" gymID="4">Gymnasie Søgning Nummer 4</div>
+        </div>
+        <script src="js/jquery.js"></script>
+        
+        <div id="status"></div>
+        <script src="js/Download.js"></script>
+    </body>
+</html>
