@@ -16,16 +16,35 @@ body {
 }
 
 input[type=text] {
+    font-size: 1.1em;
     background-color: #ffffff;
 	border: none;
 	border-radius: 10px;
 	height: 2em;
 	width: 70%;
-	margin-top: 14em;
+	margin-top: 55%;
 	margin-left: 15%;
 	margin-right: 15%;
+    text-align: center;
     transition: 1s;
-}	
+}
+
+.resultsContainer {
+    font-size: 1.1em;
+    width: 70%;
+    margin-top: 50%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    transition: 1s;
+    opacity: 0;
+}
+
+.results {
+    margin-top: 20%;
+    padding: 0.5em;
+    transition: 1s;
+}
 
 input[type=text]:focus {
     background-color: #ffffff;

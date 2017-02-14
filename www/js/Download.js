@@ -18,10 +18,6 @@ function download(url) {
             console.log("download error target " + error.target);
             console.log("download error code" + error.code);
         },
-        false,
-        {
-            headers: {
-            }
-        }
+        false,{}
     );
 }
