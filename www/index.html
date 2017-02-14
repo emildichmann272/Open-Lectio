@@ -11,8 +11,14 @@
         <title>Open-Lectio</title>
     </head>
     	
-    <body onload="download("http://www.lectio.dk")">
-        <input id="GymSearch" type="text" />
+    <body onload="download('http://www.lectio.dk')">
+        <input id="entrySearch" type="text" placeholder="Søg Gymnasie" />
+        <div class="resultsContainer">
+            <div class="results" gymID="1">Gymnasie Søgning Nummer 1</div>
+            <div class="results" gymID="2">Gymnasie Søgning Nummer 2</div>
+            <div class="results" gymID="3">Gymnasie Søgning Nummer 3</div>
+            <div class="results" gymID="4">Gymnasie Søgning Nummer 4</div>
+        </div>
         <script src="js/jquery.js"></script>
         
         <div id="status"></div>
