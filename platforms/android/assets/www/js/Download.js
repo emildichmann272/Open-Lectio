@@ -1,23 +1,16 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(download("http://www.lectio.dk"));
+function download(url) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, true);
+    xhttp.send();
+	xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("entrySearch").text = this.responseText;
+			return this.responseXML;
+			});
+    	}
+  	};
 }
 
-function download(url) {
-    var fileTransfer = new FileTransfer();
-    var uri = encodeURI(url);
-    
-    fileTransfer.download(
-        uri,
-        fileURL,
-        function(entry) {
-            console.log("download complete: " + entry.toURL());
-        },
-        function(error) {
-            console.log("download error source " + error.source);
-            console.log("download error target " + error.target);
-            console.log("download error code" + error.code);
-        },
-        false,{}
-    );
+function gymlist() {
+	var html = new download("http://www.lectio.dk/lectio/login_list.aspx")
 }

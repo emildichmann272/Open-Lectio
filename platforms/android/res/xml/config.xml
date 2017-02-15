@@ -33,5 +33,6 @@
     <allow-intent href="https://*/*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <param name="android-package" value="org.apache.cordova.core.NetworkManager" />
     <preference name="loglevel" value="DEBUG" />
 </widget>

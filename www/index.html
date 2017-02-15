@@ -8,13 +8,14 @@
         <link rel="stylesheet" type="text/css" href="./css/index.css">
         <script src="libraries/jquery.min.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/Download.js"></script>
         <title>Open-Lectio</title>
     </head>
     	
-    <body onload="download('http://www.lectio.dk')">
+    <body onload="download('http://www.lectio.dk/')">
         <input id="entrySearch" type="text" placeholder="Søg Gymnasie" />
         
-        <img src="./img/spinner.png" class="loadingFrame"></img>
+        <img src="./img/spinner.png" class="loadingFrame" />
         
         <div class="resultsContainer">
             <div class="results" gymID="1">Gymnasie Søgning Nummer 1</div>
@@ -25,6 +26,5 @@
         <script src="js/jquery.js"></script>
         
         <div id="status"></div>
-        <script src="js/Download.js"></script>
     </body>
 </html>
