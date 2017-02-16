@@ -14,6 +14,7 @@ $(document).ready(function() {
        $entrySearchValLength = String($('#entrySearch').val()).length;
        
        if ($entrySearchValLength >= 1) {
+           search();
            $($entrySearch).css("margin-top", "15%");
            $($resultsContainer).css("visibility", "visible");
            $($resultsContainer).css("opacity", "1");
