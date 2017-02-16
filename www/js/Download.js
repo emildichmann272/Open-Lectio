@@ -1,5 +1,6 @@
 var xhttp = new XMLHttpRequest();
 var list = [];
+var IDs = [];
 var loaded = false;
 
 function download(url) {
@@ -22,10 +23,9 @@ function gymlist() {
 }
 
 function search() {
-    var q = 0;
     var dupe = false;
     var search = $("#entrySearch").val();
-    var IDs = [];
+    IDs = [];
     
 	if(download && list != null && search != null) {
        for (var i = 0; i < list.length; i++) {
@@ -33,10 +33,7 @@ function search() {
             var patt = new RegExp(search, "i");
             if (patt.test(current[1])) { //calls on match
                 IDs.push(current); //sets the ID of the match into StringArray
-                console.log(current);
-                q++; //adds one to the amount of results gathered
-                if (q == 4) { //checks if we are at max number of results
-                }
+                //console.log(current);
             }
         }
     }
