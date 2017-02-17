@@ -2,6 +2,8 @@ var list = [];
 var loaded = false;
 var alphabet = "abcdefghijklmnopqrstuvwxyzæøå";
 var IDs = [];
+var gym = false;
+
 function download(url) {
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", url, true);
@@ -19,27 +21,23 @@ function gymlist() {
 			list.push(gym.getAttribute("href").replace("/lectio/", "").replace("/default.aspx", "")+"=="+gym.text);
 		})
 		loaded = true;
-        namelist("523");
 		};
     }
 }
 
 function namelist(ID) {
-    list = [];
-    var requests = [];
-    var letters = alphabet.split("");
-    letters.forEach(function(item, index) {
-        requests.push(new download("https://www.lectio.dk/lectio/"+ID+"/FindSkema.aspx?type=elev&forbogstav="+item))
-        requests[index].onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                var html = $.parseHTML(this.responseText);
-		        var gyms = $(html).find("a");
-		        $(gyms).each(function(i, gym){
-			     list.push(gym.getAttribute("href").replace("/lectio/"+ID+"/SkemaNy.aspx?type=elev&elevid=", "")+"=="+gym.text);
-		        })
-            }
+    var search = $("#entrySearch").val().split("")[0];
+	var request = new download("https://www.lectio.dk/lectio/"+ID+"/FindSkema.aspx?type=elev&forbogstav="+search)
+    request.onreadystatechange = function () {
+       if (this.readyState === 4 && this.status === 200) {
+           var html = $.parseHTML(this.responseText);
+	       var gyms = $(html).find("a");
+		   console.log("a");
+	       $(gyms).each(function(i, gym){
+	       list.push(gym.getAttribute("href").replace("/lectio/"+ID+"/SkemaNy.aspx?type=elev&elevid=", "")+"=="+gym.text);
+		   })
         }
-    })
+    }
 }
 
 function search() {

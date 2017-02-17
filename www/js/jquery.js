@@ -49,23 +49,20 @@ $(document).ready(function() {
     
     $($results).click(function() {
         $searchType = "Student";
-        
+		list = [];
+		ID = [$(this).attr("gymID"), $(this).text()]
+		namelist(ID[0]);
         console.log($(this).text());
         console.log($(this).attr("gymID"));
         
-        $($entrySearch).css("transition", "0");
-        $($entrySearch).css("visibility", "hidden");
-        $($loading).css("visibility", "visible");
-        $($loading).css("opacity", "1");
-        
-        $($entrySearch).val("");
-        $($entrySearch).css("margin-top", "55%");
+		$($entrySearch).css("margin-top", "55%");
         $($resultsContainer).css("margin-top", "50%");
         $($resultsContainer).css("opacity", "0");
         $($resultsContainer).css("visibility", "hidden");
         $($results).css("margin-top", "20%");
         
         $($entrySearch).attr("placeholder", "Søg Elev");
+		document.getElementById('entrySearch').value = "";
         $($results).removeAttr("gymID");
         
         $studentIDs = [
