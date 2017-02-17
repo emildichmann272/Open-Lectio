@@ -31,12 +31,16 @@ function namelist(ID) {
     request.onreadystatechange = function () {
        if (this.readyState === 4 && this.status === 200) {
            var html = $.parseHTML(this.responseText);
-	       var gyms = $(html).find("a");
-		   console.log("a");
+           var content = $("#m_Content_listecontainer", html);
+           console.log(content);
+           var gyms = $(content).find("a");
+		   console.log(gyms);
 	       $(gyms).each(function(i, gym){
 	       list.push(gym.getAttribute("href").replace("/lectio/"+ID+"/SkemaNy.aspx?type=elev&elevid=", "")+"=="+gym.text);
 		   })
+        console.log(list);
         }
+        loaded = true;
     }
 }
 
@@ -45,7 +49,7 @@ function search() {
     var search = $("#entrySearch").val();
     IDs = [];
     
-	if(download && list != null && search != null) {
+	if(loaded && list != null && search != null) {
        for (var i = 0; i < list.length; i++) {
             var current = list[i].split("==");
             var patt = new RegExp(search, "i");

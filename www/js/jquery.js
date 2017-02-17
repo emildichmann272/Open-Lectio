@@ -15,6 +15,11 @@ $(document).ready(function() {
        $entrySearchValLength = String($('#entrySearch').val()).length;
        
        if ($entrySearchValLength >= 1) {
+           if ($entrySearchValLength == 1 && gym) {
+               console.log(gym);
+               namelist(ID[0]);
+           }
+           
            $($entrySearch).css("margin-top", "15%");
            $($resultsContainer).css("visibility", "visible");
            $($resultsContainer).css("opacity", "1");
@@ -50,10 +55,9 @@ $(document).ready(function() {
     $($results).click(function() {
         $searchType = "Student";
 		list = [];
+        gym = true;
+        loaded = false;
 		ID = [$(this).attr("gymID"), $(this).text()]
-		namelist(ID[0]);
-        console.log($(this).text());
-        console.log($(this).attr("gymID"));
         
 		$($entrySearch).css("margin-top", "55%");
         $($resultsContainer).css("margin-top", "50%");
